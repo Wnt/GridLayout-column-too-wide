@@ -1,0 +1,36 @@
+@import "mytheme.scss";
+@import "addons.scss";
+
+// This file prefixes all rules with the theme name to avoid causing conflicts with other themes.
+// The actual styles should be defined in mytheme.scss
+
+.mytheme {
+  @include addons;
+  @include mytheme;
+
+  .header-wrapper {
+
+    > .header-layout {
+      border: 4px solid blue;
+
+      > .report-properties {
+        outline: 1px dashed black;
+
+        .caption {
+          font-weight: bold;
+          &:after {
+            content: ':';
+          }
+        }
+
+        .value {
+          white-space: normal;
+        }
+      }
+
+      > .legend {
+      }
+    }
+  }
+
+}
